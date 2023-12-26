@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "scripts-background",
+  "projectType": "application",
+  "sourceRoot": "apps/scripts/background/src",
+  "tags": ["type:script"],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/scripts/background",
+        "compiler": "babel",
+        "index": "",
+        "main": "apps/scripts/background/src/main.ts",
+        "tsConfig": "apps/scripts/background/tsconfig.app.json",
+        "generateIndexHtml": false,
+        "webpackConfig": "apps/scripts/background/webpack.config.js"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "none",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": false,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "options": {
+        "buildTarget": "scripts-background:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "scripts-background:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/scripts/background/**/*.ts"]
+      }
+    }
+  }
+}
