@@ -1,1 +1,1 @@
-console.log('online-video-helper - scripts-content');
+console.log('gpt4free-browser-extension - scripts-content');

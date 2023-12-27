@@ -3,7 +3,7 @@
   "description": "Chrome Extension React Starter",
   "version": "1.0.0",
   "manifest_version": 3,
-  "homepage_url": "https://github.com/77629296/online-video-helper",
+  "homepage_url": "https://github.com/77629296/gpt4free-browser-extension",
   "background": {
     "service_worker": "scripts/background/main.js"
   },

@@ -3,7 +3,7 @@ import browser from "webextension-polyfill";
 
 // Listen for messages sent from other parts of the extension
 browser.runtime.onMessage.addListener((request: { popupMounted: boolean }) => {
-  console.log('online-video-helper - scripts-background');
+  console.log('gpt4free-browser-extension - scripts-background');
 });
 
 browser.action.onClicked.addListener(() => {
