@@ -43,12 +43,14 @@ specifiers:
   tslib: ^2.3.0
   typescript: ~5.2.2
   url-loader: ^4.1.1
+  webextension-polyfill: ^0.10.0
 
 dependencies:
   '@swc/helpers': 0.5.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   tslib: 2.6.2
+  webextension-polyfill: 0.10.0
 
 devDependencies:
   '@babel/core': 7.23.6
@@ -9941,6 +9943,10 @@ packages:
     dependencies:
       defaults: 1.0.4
     dev: true
+
+  /webextension-polyfill/0.10.0:
+    resolution: {integrity: sha512-c5s35LgVa5tFaHhrZDnr3FpQpjj1BB+RXhLTYUxGqBVN460HkbM8TBtEqdXWbpTKfzwCcjAZVF7zXCYSKtcp9g==}
+    dev: false
 
   /webidl-conversions/7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}

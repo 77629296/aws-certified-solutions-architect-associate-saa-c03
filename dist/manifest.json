@@ -16,12 +16,7 @@
     }
   ],
   "action": {
-    "default_icon": {
-      "16": "images/icon-16x16.png",
-      "48": "images/icon-48x48.png",
-      "128": "images/icon-128x128.png"
-  },
-    "default_popup": "apps/popup/index.html"
+    "default_title": "popup"
   },
   "icons": {
     "16": "images/icon-16x16.png",
@@ -29,6 +24,10 @@
     "128": "images/icon-128x128.png"
   },
   "options_page": "apps/options/index.html",
-  "permissions": ["tabs", "activeTab", "contextMenus", "notifications", "scripting"],
-  "host_permissions": ["<all_urls>"]
+  "permissions": [ "storage", "tabs", "contextMenus", "unlimitedStorage" ],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [ {
+    "matches": [ "*://*/*" ],
+    "resources": [ "*" ]
+ } ]
 }
