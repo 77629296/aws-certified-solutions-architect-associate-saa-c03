@@ -16,7 +16,8 @@
     }
   ],
   "action": {
-    "default_title": "popup"
+    "default_title": "gpt4free",
+    "default_popup": "popup/index.html"
   },
   "icons": {
     "16": "images/icon-16x16.png",
