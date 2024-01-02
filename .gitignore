@@ -1,6 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+dist
 tmp
 /out-tsc
 
@@ -37,7 +38,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.nx/cache
+.nx
+.swc
 
-dist/apps
-dist/scripts
+# Next.js
+.next

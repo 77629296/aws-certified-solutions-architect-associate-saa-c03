@@ -1,1 +1,1 @@
-# gpt4free-browser-extension
+# gpt4free-chat
