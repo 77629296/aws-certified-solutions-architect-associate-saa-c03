@@ -136,9 +136,9 @@
     "tailwind-merge": "^2.1.0",
     "tslib": "^2.6.2"
   },
-  "packageManager": "pnpm@7.22.0",
+  "packageManager": "pnpm@8.14.0",
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=7"
+    "node": ">=20",
+    "pnpm": ">=8"
   }
 }
