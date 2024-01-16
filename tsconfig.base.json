@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/client/*": ["apps/client/src/*"],
+      "@/web/*": ["apps/web/src/*"],
       "@/server/*": ["apps/server/src/*"],
     }
   },
