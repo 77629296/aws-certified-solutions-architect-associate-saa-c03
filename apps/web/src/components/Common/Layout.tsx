@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import * as React from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
-import { Navbar } from '../Navbar';
+import Menu from '../Menu';
 import GlobalModals from '../GlobalModals';
 
 interface LayoutProps {
@@ -16,13 +16,15 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   }
 
   return (
-    <>
+    <div className="flex flex-1 flex-col overflow-auto">
       <GlobalModals />
-      <div className="flex min-h-screen flex-col pb-14 md:pb-0">
-        <Navbar />
-        {children}
+      <div className="relative h-full w-full flex justify-stretch items-stretch overflow-auto">
+        <Menu />
+        <div className="flex-1">
+          {children}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

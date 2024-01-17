@@ -1,21 +1,24 @@
+import { MotionConfig } from "framer-motion";
+
+
 const Menu = () => {
   return (
-    <>
+    <MotionConfig transition={{ mass: 1, damping: 10, duration: 0.2 }}>
       <div
-        id='menu'
-        className={`group/menu md:flex md:w-[260px] md:flex-col h-full max-md:w-3/4`}
+        className="flex flex-col fixed sm:sticky top-0 left-0 h-full overflow-visible z-[1000] border-r border-black/10 dark:border-white/25 bg-highlight"
       >
-        <div className='flex h-full min-h-0 flex-col'>
-          <div className='flex h-full w-full flex-1 items-start border-white/20'>
-            <nav className='flex h-full flex-1 flex-col space-y-1 px-2 pt-2'>
-              <div className='flex gap-2'>
-                newChat
+          <div className="flex flex-col flex-1 p-4 gap-4 h-full">
+            header
+            <div className="flex flex-1 w-full">
+              <div className="w-full gap-2 flex flex-col">
+                menuList
               </div>
-            </nav>
+            </div>
+            <div>
+            </div>
           </div>
-        </div>
       </div>
-    </>
+    </MotionConfig>
   );
 };
 
