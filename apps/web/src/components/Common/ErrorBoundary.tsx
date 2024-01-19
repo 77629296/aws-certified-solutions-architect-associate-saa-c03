@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Component } from 'react';
+
 import Custom500 from '@/pages/500';
 
 interface ErrorBoundaryProps {

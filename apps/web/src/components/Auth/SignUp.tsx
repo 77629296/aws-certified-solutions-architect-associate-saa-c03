@@ -1,10 +1,11 @@
-import * as React from "react";
-import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import PasswordField from "./Fields/PasswordField";
-import NameField from "./Fields/NameField";
+import FormControl from "@mui/material/FormControl";
+import * as React from "react";
+
 import EmailField from "./Fields/EmailField";
+import NameField from "./Fields/NameField";
+import PasswordField from "./Fields/PasswordField";
 
 export interface SignUpProps {
   handleSignUp?: (signUpVars: {
@@ -27,7 +28,7 @@ const SignUp: React.FC<SignUpProps> = ({
   const [password, setPassword] = React.useState(INITIAL);
 
   const handleSubmit = React.useCallback(async () => {
-    if (typeof handleSignUp !== "function") handleSignUp = () => { };
+    if (typeof handleSignUp !== "function") {handleSignUp = () => { };}
 
     setLoading(true);
 

@@ -1,9 +1,10 @@
-import * as React from "react";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
+import * as React from "react";
+
+import Forget from "./Forget";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import Forget from "./Forget";
 
 const App: React.FC = (props) => {
   const [authIndex, setAuthIndex] = React.useState(0);
@@ -21,7 +22,8 @@ const App: React.FC = (props) => {
   const gobackToSignIn = () => {
     setAuthIndex(0);
   };
-  if (authIndex === 2) return <Forget {...{ ...props, gobackToSignIn }} />;
+  if (authIndex === 2) {return <Forget {...{ ...props, gobackToSignIn }} />;}
+
   return (
     <>
       <Tabs

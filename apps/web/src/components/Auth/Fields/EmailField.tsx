@@ -1,9 +1,9 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
+import EmailIcon from "@mui/icons-material/EmailOutlined";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import InputAdornment from "@mui/material/InputAdornment";
-import EmailIcon from "@mui/icons-material/EmailOutlined";
+import TextField from "@mui/material/TextField";
+import * as React from "react";
 
 export interface EmailFieldProps {
   email: { text: string; error: string };

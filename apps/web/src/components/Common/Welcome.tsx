@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+
 import { Logo } from '@/components/Common/Logo';
 
 const Welcome: FC = () => {

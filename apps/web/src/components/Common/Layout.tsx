@@ -1,8 +1,9 @@
+import CircularProgress from '@mui/material/CircularProgress';
 import type { FC, ReactNode } from 'react';
 import * as React from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
-import Menu from '../Menu';
+
 import GlobalModals from '../GlobalModals';
+import Menu from '../Menu';
 
 interface LayoutProps {
   children: ReactNode;

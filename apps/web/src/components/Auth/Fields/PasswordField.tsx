@@ -1,12 +1,12 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
+import LockIcon from "@mui/icons-material/LockOpen";
+import ShownPasswordIcon from "@mui/icons-material/VisibilityOffOutlined";
+import HiddenPasswordIcon from "@mui/icons-material/VisibilityOutlined";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
-import HiddenPasswordIcon from "@mui/icons-material/VisibilityOutlined";
-import ShownPasswordIcon from "@mui/icons-material/VisibilityOffOutlined";
-import LockIcon from "@mui/icons-material/LockOpen";
+import TextField from "@mui/material/TextField";
+import * as React from "react";
 
 export interface PasswordFieldProps {
   password: { text: string; error: string };
@@ -26,6 +26,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
   const tooglePassword = () => {
     setShowPassword(!showPassword);
   };
+
   return (
     <FormControl margin="none" fullWidth error={Boolean(password.error)}>
       <TextField

@@ -1,6 +1,6 @@
-import type { FC } from 'react';
-import Link from 'next/link';
 import Button from '@mui/material/Button';
+import Link from 'next/link';
+import type { FC } from 'react';
 
 const Custom500: FC = () => {
   return (

@@ -4,8 +4,8 @@ interface MessageDto {
   message: string
 }
 
-export const refresh = async (axios: AxiosInstance) => {
-  const response = await axios.post<MessageDto, AxiosResponse<MessageDto>>("/auth/refresh");
+export const refresh = async (axios: AxiosInstance): Promise<MessageDto> => {
+  const response: AxiosResponse<MessageDto> = await axios.post<MessageDto, AxiosResponse<MessageDto>>("/auth/refresh");
 
   return response.data;
 };

@@ -1,6 +1,6 @@
-import type { FC } from 'react';
-import Button from '@mui/material/Button';
 import LoginIcon from '@mui/icons-material/Login';
+import Button from '@mui/material/Button';
+import type { FC } from 'react';
 
 import { useGlobalModalStateStore } from '@/store/useGlobalModalStateStore';
 

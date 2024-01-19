@@ -1,4 +1,5 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 import { themeColor } from '@/constants/theme';
 
 type Props = { children: React.ReactNode };
@@ -11,6 +12,7 @@ const MuiThemeProvider = ({ children }: Props) => {
       },
     },
   });
+
   return (
     <ThemeProvider theme={theme}>
       {children}

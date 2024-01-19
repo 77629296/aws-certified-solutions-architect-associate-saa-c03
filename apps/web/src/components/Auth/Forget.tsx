@@ -1,10 +1,11 @@
-import * as React from "react";
-import FormControl from "@mui/material/FormControl";
+import BackIcon from "@mui/icons-material/ArrowBackOutlined";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import FormControl from "@mui/material/FormControl";
 import IconButton from "@mui/material/IconButton";
-import BackIcon from "@mui/icons-material/ArrowBackOutlined";
+import Typography from "@mui/material/Typography";
+import * as React from "react";
+
 import EmailField from "./Fields/EmailField";
 
 export interface ForgetProps {
@@ -26,10 +27,12 @@ const Forget: React.FC<ForgetProps & NaviProps> = ({
   const [loading, setLoading] = React.useState(false);
 
   const handleSubmit = React.useCallback(async () => {
-    if (typeof handleForget !== "function") handleForget = () => {};
+    if (typeof handleForget !== "function") {handleForget = () => {};}
     setLoading(true);
+
     return handleForget({ email: email.text });
   }, []);
+
   return (
     <>
       <IconButton aria-label="go back" onClick={gobackToSignIn}>
