@@ -10,11 +10,10 @@ const createIdbStorage = (): {
   setItem: <T>(name: string, value: StorageValue<T>) => Promise<void>;
 } => {
   return {
-    // @ts-ignore I don't know how to solve it at the moment
     getItem: async <T>(name: string): Promise<StorageValue<T>> => {
       const storedValue: string = await get(name) ?? '{}';
-      // @ts-ignore I don't know how to solve it at the moment
-      return JSON.parse(storedValue, idbReviver);
+
+      return JSON.parse(storedValue, idbReviver) as StorageValue<T>;
     },
     removeItem: async (name: string): Promise<void> => {
       await del(name);

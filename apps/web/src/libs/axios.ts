@@ -1,4 +1,4 @@
-import _axios from "axios";
+import _axios, { AxiosResponse as AxiosResponseOriginal } from "axios";
 import createAuthRefreshInterceptor from "axios-auth-refresh";
 import { redirect } from "react-router-dom";
 
@@ -13,6 +13,7 @@ export type ServerError = {
   error: string;
 };
 
+export type { AxiosResponseOriginal }
 export const axios = _axios.create({ baseURL: "/api", withCredentials: true });
 
 // Intercept responses to transform ISO dates to JS date objects

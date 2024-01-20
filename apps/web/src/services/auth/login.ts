@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, UseMutationResult } from "@tanstack/react-query";
 import { AxiosResponse } from "axios";
 
 import { axios } from "@/libs/axios";
@@ -6,20 +6,20 @@ import { queryClient } from "@/libs/query-client";
 import { useAuthStore } from "@/store/useAuthStore";
 
 interface LoginDto {
-  userName: string
-  password: string
+  userName: string;
+  password: string;
 }
 
 interface AuthResponseDto {
-  status: number
+  status: number;
   user: {
-    userName: string
-    email: string
-  }
+    userName: string;
+    email: string;
+  };
 }
 
-export const login = async (data: LoginDto) => {
-  const response = await axios.post<AuthResponseDto, AxiosResponse<AuthResponseDto>, LoginDto>(
+export const login = async (data: LoginDto): Promise<AuthResponseDto> => {
+  const response: AxiosResponse<AuthResponseDto> = await axios.post<AuthResponseDto, AxiosResponse<AuthResponseDto>, LoginDto>(
     "/auth/login",
     data,
   );
@@ -27,14 +27,14 @@ export const login = async (data: LoginDto) => {
   return response.data;
 };
 
-export const useLogin = () => {
+export const useLogin = (): {
+  login: (data: LoginDto) => Promise<AuthResponseDto>;
+  loading: boolean;
+  error: unknown;
+} => {
   const setUser = useAuthStore((state) => state.setUser);
 
-  const {
-    error,
-    isPending: loading,
-    mutateAsync: loginFn,
-  } = useMutation({
+  const mutation: UseMutationResult<AuthResponseDto, unknown, LoginDto> = useMutation<AuthResponseDto, unknown, LoginDto>({
     mutationFn: login,
     onSuccess: (data) => {
       setUser(data.user);
@@ -42,5 +42,9 @@ export const useLogin = () => {
     },
   });
 
-  return { login: loginFn, loading, error };
+  return {
+    login: mutation.mutateAsync,
+    loading: mutation.isPending,
+    error: mutation.error
+  };
 };
