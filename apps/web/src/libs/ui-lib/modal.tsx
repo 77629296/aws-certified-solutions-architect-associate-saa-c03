@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import CloseIcon from "@/icons/close.svg";
 import MaxIcon from "@/icons/max.svg";
 import MinIcon from "@/icons/min.svg";
+import Locale from "@/locales";
 
 import styles from './modal.module.scss'
 
@@ -93,4 +94,21 @@ export function showModal(props: ModalProps) {
   };
 
   root.render(<Modal {...props} onClose={closeModal}></Modal>);
+}
+
+export function showImageModal(img: string) {
+  showModal({
+    title: Locale.Export.Image.Modal,
+    children: (
+      <div>
+        <img
+          src={img}
+          alt="preview"
+          style={{
+            maxWidth: "100%",
+          }}
+        ></img>
+      </div>
+    ),
+  });
 }
