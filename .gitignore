@@ -29,17 +29,30 @@ node_modules
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 testem.log
 /typings
 
 # System Files
 .DS_Store
 Thumbs.db
+*.pem
+
+# testing
+/coverage
 
 .nx
 .swc
 
-# Next.js
-.next
+# Environment Variables
+.env*.local
+
+
+*.key
+*.key.pub
+
+# vercel
+.vercel
