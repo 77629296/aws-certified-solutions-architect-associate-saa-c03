@@ -2,7 +2,6 @@
 
 English / [简体中文](./README_CN.md)
 
-<img src="./badge/aws-certified-solutions-architect-associate.png" alt="badge" width="128" height="128">  
 The AWS Certified Solutions Architect Associate SAA-C03 certification exam is one of the most challenging exams. It not only assesses your understanding of AWS well, but also ensures that you make the best architecture decisions based on the situation, making it very valuable to obtain and pass the certification.
 
 ![congratulations](./badge/congratulations.png)  
