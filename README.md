@@ -1,4 +1,4 @@
-# aws-certified-solutions-architect-associate-saa-c03
+# AWS Certified Solutions Architect Associate SAA-C03
 
 English / [简体中文](./README_CN.md)
 
